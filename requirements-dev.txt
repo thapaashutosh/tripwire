@@ -1,0 +1,4 @@
+scikit-learn==1.5.2
+numpy>=1.26,<2.2
+pytest>=8
+boto3>=1.34

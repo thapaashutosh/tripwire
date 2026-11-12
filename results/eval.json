@@ -1,0 +1,80 @@
+{
+  "config": {
+    "seeds": 5,
+    "trees": 100,
+    "fp_budget": 0.003,
+    "out": "results/eval.json"
+  },
+  "runs": [
+    {
+      "seed": 1,
+      "normal_events": 5000,
+      "attack_events": 9,
+      "caught": 8,
+      "false_positives": 27,
+      "fp_rate": 0.0054,
+      "incidents": 5,
+      "attack_incidents": 1,
+      "attack_severity": "HIGH",
+      "train_seconds": 7.31,
+      "score_ms_per_event": 0.116
+    },
+    {
+      "seed": 2,
+      "normal_events": 5000,
+      "attack_events": 9,
+      "caught": 9,
+      "false_positives": 6,
+      "fp_rate": 0.0012,
+      "incidents": 7,
+      "attack_incidents": 1,
+      "attack_severity": "HIGH",
+      "train_seconds": 0.43,
+      "score_ms_per_event": 0.115
+    },
+    {
+      "seed": 3,
+      "normal_events": 5000,
+      "attack_events": 9,
+      "caught": 9,
+      "false_positives": 15,
+      "fp_rate": 0.003,
+      "incidents": 9,
+      "attack_incidents": 1,
+      "attack_severity": "HIGH",
+      "train_seconds": 0.44,
+      "score_ms_per_event": 0.112
+    },
+    {
+      "seed": 4,
+      "normal_events": 5000,
+      "attack_events": 9,
+      "caught": 9,
+      "false_positives": 19,
+      "fp_rate": 0.0038,
+      "incidents": 16,
+      "attack_incidents": 1,
+      "attack_severity": "HIGH",
+      "train_seconds": 0.43,
+      "score_ms_per_event": 0.138
+    },
+    {
+      "seed": 5,
+      "normal_events": 5000,
+      "attack_events": 9,
+      "caught": 8,
+      "false_positives": 15,
+      "fp_rate": 0.003,
+      "incidents": 11,
+      "attack_incidents": 1,
+      "attack_severity": "HIGH",
+      "train_seconds": 0.5,
+      "score_ms_per_event": 0.129
+    }
+  ],
+  "summary": {
+    "recall_min": 0.8888888888888888,
+    "fp_rate_mean": 0.00328,
+    "fp_rate_max": 0.0054
+  }
+}

@@ -1,0 +1,2 @@
+# The Lambda needs nothing beyond the runtime (boto3 is built in).
+# Training and tests: see requirements-dev.txt

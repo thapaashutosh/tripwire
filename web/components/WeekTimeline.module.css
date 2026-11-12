@@ -1,0 +1,194 @@
+.fig {
+  margin: 0;
+  padding: 20px 20px 14px;
+}
+.plot {
+  position: relative;
+  height: 300px;
+  margin-bottom: 30px;
+}
+.svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.zone {
+  position: absolute;
+  inset: 0 0 auto 0;
+  background: var(--zone);
+  border-radius: 3px 3px 0 0;
+}
+.zoneLabel {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+.threshold {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px dashed var(--ink-3);
+}
+.threshold span {
+  position: absolute;
+  left: 6px;
+  top: -9px;
+  padding: 0 6px;
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--line-2);
+  border-radius: 3px;
+}
+
+.day {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid var(--line);
+}
+.day span {
+  position: absolute;
+  bottom: -26px;
+  left: 0;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--ink-3);
+  padding-left: 6px;
+}
+
+.normal {
+  stroke: var(--dot);
+  stroke-width: 3;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  opacity: 0.6;
+}
+.otherRing {
+  stroke: var(--ink-2);
+  stroke-width: 8;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+.otherHole {
+  stroke: var(--panel);
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+.high {
+  stroke: var(--high);
+  stroke-width: 8;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* callout pinned to the top incident */
+.callout {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.leader {
+  position: absolute;
+  top: 0;
+  width: 28px;
+  border-top: 1px solid var(--ink-2);
+}
+.card {
+  position: absolute;
+  top: -15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  background: var(--panel-2);
+  border: 1px solid var(--line-2);
+  border-radius: 5px;
+  font-size: 13px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.card:hover {
+  border-color: var(--ink-3);
+}
+.left .leader {
+  right: 8px;
+}
+.left .card {
+  right: 36px;
+}
+.right .leader {
+  left: 8px;
+}
+.right .card {
+  left: 36px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.legend i {
+  display: inline-block;
+  border-radius: 50%;
+}
+.kNormal {
+  width: 5px;
+  height: 5px;
+  background: var(--dot);
+}
+.kOther {
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--ink-2);
+}
+.kHigh {
+  width: 9px;
+  height: 9px;
+  background: var(--high);
+}
+
+.calloutStatic {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .callout {
+    display: none;
+  }
+  .calloutStatic {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .fig {
+    padding: 14px 12px 12px;
+  }
+  .plot {
+    height: 240px;
+  }
+  .zoneLabel {
+    display: none;
+  }
+}

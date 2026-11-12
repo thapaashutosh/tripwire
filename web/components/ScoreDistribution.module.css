@@ -1,0 +1,74 @@
+.fig {
+  margin: 0;
+}
+.markers {
+  position: relative;
+  border-bottom: 1px dashed var(--line);
+  margin-bottom: 4px;
+}
+.markersLabel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 11.5px;
+  color: var(--ink-3);
+}
+.none {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  font-size: 11.5px;
+  color: var(--ink-3);
+}
+.mark {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  margin-left: -4.5px;
+  border-radius: 50%;
+}
+.markHigh {
+  background: var(--high);
+}
+.markOther {
+  border: 2px solid var(--ink-2);
+}
+
+.plot {
+  position: relative;
+  height: 120px;
+}
+.svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.bar {
+  fill: var(--dot);
+}
+.threshold {
+  position: absolute;
+  top: -6px;
+  bottom: 0;
+  border-left: 1.5px dashed var(--ink);
+}
+.threshold span {
+  position: absolute;
+  top: 0;
+  right: 6px;
+  font-size: 11.5px;
+  color: var(--ink);
+  white-space: nowrap;
+  background: var(--panel);
+  padding: 0 4px;
+}
+
+.axis {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6px;
+  border-top: 1px solid var(--line-2);
+  font-size: 11.5px;
+  color: var(--ink-3);
+}

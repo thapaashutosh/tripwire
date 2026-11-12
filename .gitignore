@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+infra/.terraform/
+infra/build/
+infra/*.tfstate*
+infra/.terraform.lock.hcl
+results/model.json
+.DS_Store
