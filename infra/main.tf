@@ -209,8 +209,8 @@ resource "aws_s3_bucket_policy" "trail" {
     Version = "2012-10-17"
     Statement = [
       { Sid = "AclCheck", Effect = "Allow", Principal = { Service = "cloudtrail.amazonaws.com" }, Action = "s3:GetBucketAcl", Resource = aws_s3_bucket.trail[0].arn },
-      { Sid       = "Write", Effect = "Allow", Principal = { Service = "cloudtrail.amazonaws.com" }, Action = "s3:PutObject",
-        Resource  = "${aws_s3_bucket.trail[0].arn}/AWSLogs/${local.account}/*",
+      { Sid      = "Write", Effect = "Allow", Principal = { Service = "cloudtrail.amazonaws.com" }, Action = "s3:PutObject",
+        Resource = "${aws_s3_bucket.trail[0].arn}/AWSLogs/${local.account}/*",
       Condition = { StringEquals = { "s3:x-amz-acl" = "bucket-owner-full-control" } } },
     ]
   })
